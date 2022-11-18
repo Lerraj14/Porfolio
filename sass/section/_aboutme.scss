@@ -1,0 +1,343 @@
+.aboutme-section {
+  position: relative;
+  background-color: $color-primary-light2;
+  height: 100vh;
+  padding: 2rem;
+  margin-top: 4rem;
+
+  &--container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    // background-color: aqua;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 80%;
+    min-height: 70%;
+    border-radius: 11px;
+    box-shadow: $box-shadow-card;
+    transition: all 0.2s ease;
+    overflow: hidden;
+    &:hover {
+      transition: all 0.2s ease;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+        rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        border-right: 4px solid $color-primary-dark;
+        border-bottom: 4px solid $color-primary-dark;
+    }
+    &__left {
+    position: relative;
+      // background-color: bisque;
+      width: 60%;
+      max-height: 100%;
+      overflow: hidden;
+    }
+    &__right {
+      padding: 2rem;
+      // background-color: orange;
+      width: 100%;
+      height: 50rem;
+      line-height: 1.2;
+
+      h3 {
+        font-size: $h3-size;
+        margin-bottom: 2rem;
+        text-transform: uppercase;
+        color: $color-primary-dark;
+      }
+      p {
+        // background-color: red;
+        font-size:$p-size;
+      }
+      .cta-links{
+        display: flex;
+        gap: 2rem;
+      }
+      
+
+    }
+  }
+  // About me picture and details
+  .card {
+    width: 100%;
+    height: 54rem;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.212);
+    background: $color-primary-light2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: all .4s;
+    overflow: hidden;
+    &__logo{
+        background-image: url('../../sources/profile.jpg');
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+
+        p{
+            color: red;
+        }
+    }
+   }
+   
+   .card::before {
+    content: 'JARREL RANDEL DEL ROSARIO';
+    font-size: 1.2rem;
+    letter-spacing: 0.2em;
+    position: absolute;
+    bottom: 8px;
+    left: 20px;
+    color: rgb(51, 51, 51);
+    font-weight: 700;
+   }
+   
+   .card div {
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.212);
+    cursor: pointer;
+    z-index: 10;
+    transition: all .4s;
+    background-color: #fff;
+   }
+   
+   .card:hover div {
+    transform: translateY(-40px);
+    background-image: linear-gradient(to top, #0b2545b1, rgba(119, 119, 119, 0.521)),
+    url(/sources/profile.jpg);
+    transition: all ease 1s;
+   }
+
+   
+   //social media and download cv container container
+   .cta-links{
+    margin-top:2rem;
+    // background-color: red;
+    display: flex;
+
+   }
+
+   // social media icons style and animation 
+   .wrapper{
+    display: inline-flex;
+    .icon{
+      margin: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      position: relative;
+      z-index: 2;
+      cursor: pointer;
+      span{
+        position: relative;
+        height:60px; 
+        width: 60px;
+        display: block;
+        background:#fff;
+        text-align: center;
+        border-radius:50%;
+        z-index: 2;
+        box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+        transition: all 0.4s cubic-bezier(0.68,-0.55,0.265,1.55);
+        a{
+        
+          color:rgb(0, 0, 0);
+          &:hover{
+            color: #fff;
+          }
+        }
+        }
+        i{
+          font-size:25px;
+          line-height: 60px;
+        }
+   
+        .tooltip{
+          position: absolute;
+          top: 0px;
+          color:#fff;
+          background:#fff;
+          font-size: 20px;
+          padding:10px 18px;
+          border-radius: 25px;
+          box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+          opacity: 0;
+          pointer-events:none;
+          transition: all 0.4s cubic-bezier(0.68,-0.55,0.265,1.55);
+          &::before{
+            position: absolute;
+            content:'';
+            height:15px;
+            width: 15px;
+            background:#fff;
+            bottom:-8px;
+            left: 50%;
+            transform: translateX(-50%) rotate(45deg);
+            transition: all 0.4s cubic-bezier(0.68,-0.55,0.265,1.55);
+          }
+         }
+        &:hover{ 
+          span{
+              color: #fff;
+              text-shadow:0px -1px 0px rgba(0,0,0,0.4);
+          } 
+          .tooltip{
+            top: -70px;
+            opacity: 1;
+            pointer-events: auto;
+          }
+        }
+     }
+   .facebook{
+      &:hover{
+        .tooltip,span{
+          background-color: #3B5999;
+          &::before{
+            background-color: #3B5999;
+          }
+        }
+      }
+     }
+     .linkedin{
+      &:hover{
+        .tooltip,span{
+          background-color: #0072b1;
+          &::before{
+            background-color: #0072b1;
+          }
+        }
+      }
+     }
+     .instagram{
+      &:hover{
+        .tooltip,span{
+          background-color: #e1306c;
+          &::before{
+            background-color: #e1306c;
+          }
+        }
+      }
+     }
+
+     .github{
+      &:hover{
+        .tooltip,span{
+          background-color: #333;
+          &::before{
+            background-color: #333;
+          }
+        }
+      }
+     }
+     .youtube{
+      &:hover{
+        .tooltip,span{
+          background-color: #DE463B;
+          &::before{
+            background-color: #DE463B;
+          }
+        }
+      }
+     }
+   }
+ 
+
+  // CV link Button
+  &__cv-link {
+    margin-top: 2rem;
+    appearance: none;
+    backface-visibility: hidden;
+    background-color: #0b2545;
+    border-radius: 11px;
+    border-style: none;
+    box-shadow: none;
+    box-sizing: border-box;
+    color: $color-white;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.6rem;
+    font-weight: 700;
+    height: 5rem;
+    letter-spacing: normal;
+    line-height: 1.5;
+    outline: none;
+    overflow: hidden;
+    padding: 1.4rem 1.3rem;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transform: translate3d(0, 0, 0);
+    transition: all 0.3s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: top;
+    white-space: nowrap;
+
+    &:hover {
+      background-color:$color-grey-dark;
+      box-shadow: rgba(0, 0, 0, 0.05) 0 5px 30px, rgba(0, 0, 0, 0.05) 0 1px 4px;
+      opacity: 1;
+      transform: translateY(0);
+      transition-duration: 0.35s;
+      color: $color-primary-light2;
+
+      &:after {
+        opacity: 0.5;
+      }
+    }
+    &:active {
+      box-shadow: rgba(0, 0, 0, 0.1) 0 3px 6px 0, rgba(0, 0, 0, 0.1) 0 0 10px 0,
+        rgba(0, 0, 0, 0.1) 0 1px 4px -1px;
+      transform: translateY(2px);
+      transition-duration: 0.35s;
+      &:after {
+        opacity: 1;
+      }
+    }
+  }
+  &__cv-text {
+    text-decoration: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .aboutme-section {
+    &__cv-link {
+      padding: 14px 22px;
+      width: 176px;
+    }
+  }
+}
+
+@media screen and (max-width: 640px){
+    .wrapper {
+        width: 350px;
+    }
+    .wrapper ul li{
+        margin-top: 10px;
+    }
+    .wrapper ul li.google{
+        margin-left: 60px;
+    }
+  }
+  
+  
+  @media screen and (max-width: 340px){
+    .wrapper {
+        width: 150px;
+    }
+    .wrapper ul li{
+        margin:15px;
+    }
+    .wrapper ul li.google{
+        margin-left: 15px;
+    }
+  }
+  

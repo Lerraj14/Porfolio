@@ -1,0 +1,196 @@
+.et-hero-tabs,
+.et-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  // position: relative;
+  background: $color-white;
+  padding: 0 2rem;
+  h1 {
+    font-size: 4rem;
+    margin: 0;
+    letter-spacing: 1.2rem;
+  }
+  h3 {
+    font-size: 4rem;
+    letter-spacing: 0.3rem;
+    opacity: 0.6;
+  }
+}
+
+// for the navigation container
+.et-hero-tabs-container {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  background-image: linear-gradient(to top, #134074dd, #8da9c4bb),
+  url(/sources/Background.jpg);
+  z-index: 10;
+  &--sticky {
+    transition: all 0.5s ease;
+    position: fixed;
+    top: 0;
+    width: 80%;
+    border-radius: 5px;
+    height: 4rem;
+    background-color:$color-primary-light2;
+  }
+}
+// for the navigation tabs
+.et-hero-tab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  color: $color-primary-light2;
+  letter-spacing: 0.5rem;
+  transition: all 0.5s ease;
+  font-size: 10rem;
+  &:hover {
+    color: $color-primary;
+    background: $color-primary-light2;
+    transition: all 0.5s ease;
+  }
+}
+.et-hero-tab-slider {
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 6px;
+  background: $color-tertiary-light;
+  transition: left 0.3s ease;
+}
+
+.et-hero {
+  &-container {
+    position: absolute;
+    // background-color: red;
+    // background-image: ;
+    background-image: linear-gradient(to top, #134074dd, #8da9c4bb),
+      url(/sources/Background.jpg);
+    height: 100%;
+    width: 100%;
+    margin-top: 2rem;
+    &-left {
+      //  background-color: chocolate;
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 50%;
+      height: 50%;
+      top: 20%;
+      left: 50%;
+      margin-top: 4rem;
+      transform: translate(-50%, -50%);
+    }
+    &-right {
+      position: absolute;
+      // background-color: #66b1f1;
+      left: 50%;
+      top: 65%;
+      height: 30%;
+      width: 80%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      h1 {
+        color: $color-white;
+        margin-bottom: 2rem;
+        text-transform: uppercase;
+      }
+      h2 {
+        color: $color-white;
+        text-transform: uppercase;
+        font-size: 2rem;
+        line-height: 1.2rem;
+        margin-bottom: 2rem;
+      }
+      a {
+        text-transform: uppercase;
+        background-image: linear-gradient(
+          144deg,
+          $color-primary,
+          $color-tertiary-light 50%,
+          #00ddeb
+        );
+        border: 0;
+        border-radius: 8px;
+        box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+        box-sizing: border-box;
+        color: #ffffff;
+        display: flex;
+        font-family: Phantomsans, sans-serif;
+        font-size: 20px;
+        justify-content: center;
+        line-height: 1em;
+        max-width: 100%;
+        min-width: 140px;
+        padding: 3px;
+        text-decoration: none;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        white-space: nowrap;
+        cursor: pointer;
+        span {
+          background-color: rgb(5, 6, 45);
+          padding: 16px 24px;
+          border-radius: 6px;
+          width: 100%;
+          height: 100%;
+          transition: 300ms;
+        }
+        &:hover {
+          outline: 0;
+          background-color: $color-primary-light2;
+          transition: all 0.5s ease;
+          color: $color-primary-dark;
+          span {
+            background: none;
+          }
+        }
+        &:active {
+          outline: 0;
+        }
+      }
+    }
+  }
+  &-image {
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    max-width: 90%;
+    max-height: 90%;
+  }
+}
+
+@media (min-width: 800px) {
+  .et-hero-tabs,
+  .et-slide {
+    h1 {
+      font-size: 4rem;
+    }
+    h3 {
+      font-size: 2.5rem;
+    }
+  }
+  .et-hero-tab {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 768px) {
+  a {
+    font-size: 24px;
+    min-width: 196px;
+  }
+}

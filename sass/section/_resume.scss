@@ -1,0 +1,297 @@
+.section-resume {
+  // background-color: red;
+background-color: $color-grey-light-1;
+  min-height: 100vh;
+  max-width: 100vw;
+  margin: 0 auto;
+  position: relative;
+  padding: 8rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  &__header {
+    // background-color: blue;
+    margin: 2rem;
+    font-size: $h2-size;
+    color:$color-primary-dark;
+    text-transform: uppercase;
+  }
+  .resume {
+    &-info__container {
+      background: $color-primary-light2;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      max-width: 84%;
+      //   min-height: 100rem;
+      // background-color: bisque;
+      border-radius: 11px;
+      box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+      &--left {
+        padding: 2rem;
+        // background-color: violet;
+        max-width: 100%;
+        max-height: 100%;
+        h3 {
+          margin-bottom: 2rem;
+          font-size: $h3-size;
+        }
+        h4 {
+          font-size: $h4-size;
+        }
+        p {
+          margin-top: 1.2rem;
+          margin-bottom: 1.2rem;
+          font-size: $p-size;
+        }
+      }
+      &--service {
+        padding: 2rem;
+        // background-color: rgb(19, 254, 160);
+        h3 {
+          margin-bottom: 2rem;
+          font-size: $h3-size;
+        }
+        .service {
+          &__container {
+            // background-color: orange;
+            column-gap: 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            text-align: center;
+            max-width: 100%;
+            min-height: 30rem;
+          }
+          &-cards {
+            position: relative;
+            perspective:150rem;
+            -moz-perspective: 150rem;
+            
+            .card__side{
+              &-front{
+                
+                min-width: 100%;
+                min-height: 30rem;
+                position: absolute;
+                border-radius: 11px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-position: fixed;
+                box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+                rgba(0, 0, 0, 0.23) 0px 3px 6px;
+                background-size: cover;
+                background-repeat: no-repeat;
+                transition:all .8s;
+                perspective:150rem;
+                -moz-perspective: 150rem;
+                z-index:5;
+                backface-visibility: hidden;
+             &.uiux-front{
+              background-image: linear-gradient(1190deg, #2193b0 0%, #6dd5edc6 36%),
+                url('https://images.unsplash.com/photo-1545235617-9465d2a55698?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1780&q=80');
+             }
+             &.web-front{
+              background-image: linear-gradient(1190deg, #de6262  0%,  #ffb88cdd 43%),
+                url(' https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80');
+             }
+             &.mobile-front{
+              background-image: linear-gradient(190deg, #56ab2f  0%,  #a8e063e3 43%),
+                url(' https://images.unsplash.com/photo-1533906966484-a9c978a3f090?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80');
+             }
+              }
+              &-back{
+                min-width: 100%;
+                position: absolute;
+                color:#fff;
+                font-size: 2rem;
+                transition:all .8s;
+                min-height: 30rem;
+                perspective:150rem;
+                -moz-perspective: 150rem;
+                border-radius: 11px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-position: fixed;
+                box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+                rgba(0, 0, 0, 0.23) 0px 3px 6px;
+                transform: rotateY(180deg);
+                backface-visibility: hidden;
+                p{
+                  font-size: $p-size;
+                  text-transform: capitalize;
+                }
+                &.uiux-back{
+                  background: linear-gradient(1190deg, #2193b0 0%, #6dd5ed 36%);
+                }
+                &.web-back{
+                  background: linear-gradient(1190deg, #de6262  0%,  #ffb88c 43%);
+                }
+
+                &.mobile-back{
+                  background: linear-gradient(190deg, #56ab2f  0%,  #a8e063e3 43%);
+                }
+
+              }
+            }
+            &:hover .card{
+              &__side-front{
+                transform: rotateY(180deg);
+              }
+              &__side-back{
+                transform: rotateY(0);
+              }
+            }
+              h4 {
+                font-size: $h4-size;
+                color: $color-primary-light2;
+              }
+          }
+        }
+      }
+
+      &--softskills {
+        // background-color: rgb(255, 204, 0);
+        max-width: 80rem;
+        max-height: 50rem;
+        padding: 2rem;
+        text-align: start;
+        text-transform: uppercase;
+        .softskills-container {
+          // background-color: magenta;
+          max-width: 100%;
+          max-height:100%;
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          text-align: center;
+          align-content: center;
+          gap: 2rem;
+          justify-content: center;
+              img{
+                max-width: 8rem;
+                max-height: 8rem;
+                margin: 2rem;
+                &:hover{
+                  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+                  transform: translate3d(0, 0, 0);
+                  backface-visibility: hidden;
+                  perspective: 1000px;
+                }
+              }
+              .softskills{
+                &__emphaty{
+                  // background-color: red;
+                  img{
+                    margin-bottom: 1.2rem;
+                  }
+                }
+                &__comm{
+                  img{
+                    margin-bottom: 0.5rem;
+                  }
+                }
+              }
+          }  
+        }
+
+
+        h5 {
+          font-size: $h5-size;
+          font-weight: 600;
+        }
+        &--techskills {
+          margin-top: 2rem;
+          // background-color: rgb(2, 251, 255);
+          max-width: 100%;
+          max-height: 100%;
+          img{
+            width: 8rem;
+            height: 8rem;
+            margin: 1.2rem;
+            &:hover{
+              animation: bounce 0.82s cubic-bezier(.36,.07,.19,.97) both;
+              transform: translate3d(0, 0, 0);
+              backface-visibility: hidden;
+              perspective: 1000px;
+            }
+          }
+          h5{
+            font-size: $h5-size;
+          }
+          text-transform: capitalize;
+          padding: 2rem;
+          .techskills {
+            &__container {
+              display: grid;
+              grid-template-columns: 1fr 1fr 1fr;
+              text-align: center;
+              width: 100%;
+              min-height: 40rem;
+              // background-color: blanchedalmond;
+              h5 {
+                font-size: $h5-size;
+              }
+            }
+            &-html {
+              // background-color: aliceblue;
+              width: 100%;
+              height: 100%;
+            }
+            &-css {
+              // background-color: rgb(90, 149, 201);
+              width: 100%;
+              height: 100%;
+            }
+            &-javascript {
+              // background-color: rgb(61, 245, 129);
+              width: 100%;
+              height: 100%;
+            }
+            &-react {
+              // background-color: rgb(56, 134, 183);
+              width: 100%;
+              height: 100%;
+            }
+            &-nextjs {
+              // background-color: rgb(215, 243, 61);
+              width: 100%;
+              height: 100%;
+            }
+            &-typescript {
+              // background-color: rgb(61, 219, 41);
+              width: 100%;
+              height: 100%;
+            }
+            &-tailwind {
+              // background-color: rgb(223, 181, 45);
+              width: 100%;
+              height: 100%;
+            }
+            &-bootstrap {
+              // background-color: rgb(255, 39, 201);
+              width: 100%;
+              height: 100%;
+            }
+            &-sass {
+              // background-color: rgb(95, 98, 101);
+              width: 100%;
+              height: 100%;
+            }
+            &-github {
+              // background-color: rgb(253, 63, 145);
+              width: 100%;
+              height: 100%;
+            }
+            &-npm {
+              // background-color: rgb(77, 162, 24);
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+ 
