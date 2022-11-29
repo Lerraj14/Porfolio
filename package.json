@@ -9,7 +9,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "node-sass": "^7.0.3"
+    "node-sass": "^7.0.3",
+    "parcel": "^2.8.0"
   },
   "dependencies": {
     "animate.css": "^4.1.1",

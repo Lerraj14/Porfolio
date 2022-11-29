@@ -29,7 +29,7 @@ flex-direction: column;
         border-radius: 11px;
         overflow: hidden;
         text-align: center;
-      
+        box-shadow: rgba(255, 255, 255, 0.25) 0px 25px 50px -12px;
         p{
             font-size: $p-size;
         }
@@ -51,6 +51,7 @@ flex-direction: column;
                 background-size: cover;
                 background-repeat: no-repeat;
                 clip-path: polygon(0 0,100% 0,100% 85%,0 100%);
+         
      
             }
             &-middle{
