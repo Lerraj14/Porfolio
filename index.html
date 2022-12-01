@@ -11,6 +11,7 @@
     />
     <script defer type="text/javascript" src="/js/index.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
     <title>Document</title>
   </head>
   <body>
@@ -46,7 +47,7 @@
         >
         <a
           class="et-hero-tab animate__animated animate__fadeInDown"
-          href="#tab-About Me"
+          href="#tab-AboutMe"
           >About Me</a
         >
         <a
@@ -70,7 +71,7 @@
     <!-- Main -->
     <main class="et-main">
       <!-- aboutme -->
-      <section class="aboutme-section" id="tab-About Me">
+      <section class="aboutme-section" id="tab-AboutMe">
         <div class="aboutme-section--container">
           <div class="aboutme-section--container__left">
             <div class="card">
@@ -107,15 +108,15 @@
               out to <strong>jarreld14@gmail.com</strong> to connect!.
             </p>
             <div class="cta-links">
-              <a class="aboutme-section__cv-link" href="#"><span class="aboutme-section__cv-text">Download CV</span></a>     
+              <a class="aboutme-section__cv-link" href="/sources/Jarrel Resumei.pdf"><span class="aboutme-section__cv-text">Download CV</span></a>     
                <div class="wrapper">
                 <div class ='icon facebook'>
                   <div class="tooltip">Facebook</div>
-                  <span><a href="https://www.facebook.com/jarrel.delrosario/"><div><i class="fab fa-facebook"></i></div></a></span>
+                  <span><a href="https://www.facebook.com/jarrel.delrosario/" ><div><i class="fab fa-facebook"></i></div></a></span>
                 </div>
                 <div class ='icon linkedin'>
                   <div class="tooltip">linkedin</div>
-                  <span><a href="https://www.linkedin.com/in/jarrel-del-rosario-715a65252/"><div><i class="fab fa-linkedin"></i></div></i></a></span>
+                  <span><a href="https://www.linkedin.com/in/jarrel-del-rosario-715a65252/" ><div><i class="fab fa-linkedin"></i></div></i></a></span>
                 </div>
                 <div class ='icon instagram'>
                   <div class="tooltip">Instagram</div>
@@ -271,7 +272,7 @@
             </div>
             <div class="porfolio-container__projects--description">
             <h3>omnifood project</h3>
-            <span><a href="https://omnifood-jarrel.netlify.app/">visit Project</a></span>
+            <span><a href="https://omnifood-jarrel.netlify.app/" target="_blank">visit Project</a></span>
             <br/>
             <br/>
             <p>A  web pplication that delivers fresh and ready to cook food right in front of your door steps</p>
@@ -283,7 +284,7 @@
             </div>
             <div class="porfolio-container__projects--description">
             <h3>Forkify project</h3>
-            <span><a href="https://forkify-webappv1.netlify.app/">visit Project</a></span>
+            <span><a href="https://forkify-webappv1.netlify.app/" target="_blank">visit Project</a></span>
             <br/>
             <br/>
             <p>A web application that browse all the famous recipe according to a given ingredient</p>
@@ -295,7 +296,7 @@
             </div>
             <div class="porfolio-container__projects--description">
             <h3>Guess my Number</h3>
-            <span><a href="https://visionary-basbousa-880544.netlify.app/">visit Project</a></span>
+            <span><a href="https://visionary-basbousa-880544.netlify.app/" target="_blank">visit Project</a></span>
             <br/>
             <br/>
             <p>A game application that let's you guess a hidden number with a limited attempts</p>
@@ -354,33 +355,33 @@
               </div>
             </div>
 
-            <div class="contact-container__form-form">
+            <form class="contact-container__form-form" name="sign-up" netlify>
               <div class="contact-container__form-input">
                 <ul>
                   <li>
-                    <input id="name" type="text" placeholder="Your name">
+                    <input id="name" type="text" placeholder="Your name" name="name" required>
                   </li>
                   <li>
-                    <input id="email" type="text" placeholder="Your Email">
+                    <input id="email" type="text" placeholder="Your Email"name="email"required>
                   </li>
                   <li>
-                    <input id="phone" type="number" placeholder="Your Phone">
+                    <input id="phone" type="number" placeholder="Your Phone"name="phone"required>
                   </li>
                   <li>
-                    <input id="subject" type="text" placeholder="Your Subject">
+                    <input id="subject" type="text" placeholder="Your Subject" name="subject"required>
                   </li>
                   <li class="message-form">
-                      <textarea id ='message' placeholder="Your message here"></textarea>
+                      <textarea id ='message' placeholder="Your message here"name="message"required></textarea>
                   </li>
                 </ul>
               </div>
             
               <div class="contact-container__form-btn">
-               <a id ='send_message' href="#">Submit now</a>
+               <button id ='send_message' href="#">Submit now</button>
               </div>
 
               
-            </div>
+            </form>
           </div>
    
         </div>

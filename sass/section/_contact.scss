@@ -116,7 +116,7 @@ background-color: $color-grey-light-1;
       }
     }
     &-btn {
-        a {
+        button {
             padding: 1.3rem 3rem;
             font-size: $default-font-size;
             text-transform: uppercase;
@@ -132,14 +132,14 @@ background-color: $color-grey-light-1;
             outline: none;
             margin: 2rem;
         }
-        a:hover {
+        button:hover {
             background-color: $color-primary;
             box-shadow: 0px 5px 5px $color-primary-light;
             color: #fff;
             transform: translateY(-7px);
           }
           
-          a:active {
+          button:active {
             transform: translateY(-1px);
           }
       }

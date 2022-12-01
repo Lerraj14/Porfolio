@@ -17,3 +17,29 @@ const stickyNav = () => {
   }
 };
 
+// Smooth scrolling 
+const alllinks=document.querySelectorAll('a:link');
+alllinks.forEach((link)=>[
+  link.addEventListener('click',function(e){
+ e.preventDefault();
+ const href=link.getAttribute('href');
+
+
+ // scroll back to top 
+
+ if(href==='#')window.scrollTo({
+  top:0,
+  behavior:'smooth',
+ });
+ if(href!=='#'&&href.startsWith('#')){
+  const sectionEl=document.querySelector(href);
+ sectionEl.scrollIntoView({
+  behavior:'smooth'
+ })
+ }else{
+  window.open(`${href}`, '_blank');
+ }
+
+  })
+])
+
