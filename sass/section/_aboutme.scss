@@ -4,6 +4,32 @@
   height: 100vh;
   padding: 2rem;
   margin-top: 4rem;
+  
+@include respond(tab-land){ // width <1200?
+background-color: #DE463B;
+
+&--container{
+  // background-color: chartreuse;
+  height: 60rem;
+  &__right {
+    // background-color: cadetblue;
+    width: 60rem;
+  }
+
+}
+
+}
+
+@include respond(tab-port){ // width <900?
+background-color: orange;
+height:230vh;
+}
+@include respond(phone){ // width <600?
+background-color: aqua;
+height:260vh;
+
+}
+
 
   &--container {
     display: flex;
@@ -26,42 +52,74 @@
         rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
         border-right: 4px solid $color-primary-dark;
         border-bottom: 4px solid $color-primary-dark;
+        @include respond(phone){ // width <900?
+          border-right: 2px solid $color-primary-dark;
+          border-bottom: 2px solid $color-primary-dark;
+          }
     }
-    &__left {
+    @include respond(phone){ // width <900?
+      position: relative;
+      }
+    &__left { 
     position: relative;
       // background-color: bisque;
-      width: 60%;
+      width: 100%;
       max-height: 100%;
       overflow: hidden;
+      @include respond(tab-port){ // width <900?
+        width: 90%;
+        max-height: 100%;
+        }
+        @include respond(phone){ // width <900?
+          width: 100%;
+          max-height: 100%;
+          }
     }
     &__right {
       padding: 2rem;
       // background-color: orange;
-      width: 100%;
+      max-width: 60%;
       height: 50rem;
       line-height: 1.2;
-
+      @include respond(tab-land){
+        height: 60rem;
+      }
       h3 {
         font-size: $h3-size;
         margin-bottom: 2rem;
         text-transform: uppercase;
         color: $color-primary-dark;
+        @include respond(tab-land){
+          margin-top:2rem;
+        }
       }
       p {
         // background-color: red;
         font-size:$p-size;
       }
-      .cta-links{
-        display: flex;
-        gap: 2rem;
-      }
-      
-
+      @include respond(tab-port){ // width <900?
+        width: 100%;
+        }
+        @include respond(phone){ // width <900?
+          
+          
+          }
     }
+    @include respond(tab-port){ // width <900?
+      display: flex;
+      flex-direction: column;
+      }
+      @include respond(phone){ // width <900?
+       justify-content: start;
+       min-width: 95%;
+       min-height: 70%;
+       overflow: hidden;
+        }
+
   }
   // About me picture and details
   .card {
-    width: 100%;
+    max-width: 100%;
     height: 54rem;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.212);
     background: $color-primary-light2;
@@ -71,17 +129,29 @@
     position: relative;
     transition: all .4s;
     overflow: hidden;
+    @include respond(tab-land){ // width <1200?
+      min-height: 60rem;  
+    }
+    @include respond(tab-port){ // width <900?;
+
+    }
     &__logo{
         background-image: url('../../sources/profile.jpg');
         background-size: cover;
         display: flex;
         justify-content: center;
         align-items: flex-end;
-
-        p{
-            color: red;
+      
+        @include respond(tab-port){ // width <900?
+          background-size: cover;
+          position:absolute;
+          background-repeat: no-repeat;
+          background-position: center;
         }
+        @include respond(phone){ // width <600?
+        }   
     }
+
    }
    
    .card::before {
@@ -118,13 +188,20 @@
    .cta-links{
     margin-top:2rem;
     // background-color: red;
+    gap: 2rem;
     display: flex;
-
+    @include respond(tab-land){ // width <1200?
+      margin-top: 2rem;
+    }   
+    @include respond(tab-port){ // width <900?
+      flex-direction: column-reverse;
+      } 
    }
 
    // social media icons style and animation 
    .wrapper{
-    display: inline-flex;
+    display:flex;
+
     .icon{
       margin: 0 20px;
       display: flex;
@@ -192,7 +269,10 @@
             opacity: 1;
             pointer-events: auto;
           }
-        }
+        }   
+        @include respond(tab-land){ // width <1200?
+          margin: 0 10px;
+        }     
      }
    .facebook{
       &:hover{
@@ -245,6 +325,11 @@
         }
       }
      }
+     @include respond(phone){ // width <900?
+          position: absolute;
+          left: 15%;
+          bottom: 5%;
+       } 
    }
  
 
@@ -301,43 +386,12 @@
         opacity: 1;
       }
     }
+    @include respond(tab-land){
+ 
+    }
   }
   &__cv-text {
     text-decoration: none;
   }
 }
 
-@media (min-width: 768px) {
-  .aboutme-section {
-    &__cv-link {
-      padding: 14px 22px;
-      width: 176px;
-    }
-  }
-}
-
-@media screen and (max-width: 640px){
-    .wrapper {
-        width: 350px;
-    }
-    .wrapper ul li{
-        margin-top: 10px;
-    }
-    .wrapper ul li.google{
-        margin-left: 60px;
-    }
-  }
-  
-  
-  @media screen and (max-width: 340px){
-    .wrapper {
-        width: 150px;
-    }
-    .wrapper ul li{
-        margin:15px;
-    }
-    .wrapper ul li.google{
-        margin-left: 15px;
-    }
-  }
-  

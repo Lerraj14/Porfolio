@@ -1,38 +1,40 @@
 $color-primary: #134074;
-$color-primary-light:#8DA9C4;
-$color-primary-dark:#0B2545;
-$color-primary-dark2:#13315C;
-$color-primary-light2:#EEF4ED;
-$color-grey-dark:#777;
-$color-white:#fff;
-$color-black:#000;
+$color-primary-light: #8da9c4;
+$color-primary-dark: #0b2545;
+$color-primary-dark2: #13315c;
+$color-primary-light2: #eef4ed;
+$color-grey-dark: #777;
+$color-white: #fff;
+$color-black: #000;
 
+$color-secondary-light: #ffb900;
+$color-secondary-dark: #ff7730;
 
-$color-secondary-light:#ffb900;
-$color-secondary-dark:#ff7730;
+$color-tertiary-light: #2998ff;
+$color-tertiary-dark: #5643fa;
 
-$color-tertiary-light:#2998ff;
-$color-tertiary-dark:#5643fa;
+$color-grey-light-1: #f7f7f7;
+$color-grey-light-2: #eee;
 
-$color-grey-light-1:#f7f7f7;
-$color-grey-light-2:#eee;
-
-$color-grey-dark:#777;
-$color-grey-dark-2:#999;
-$color-grey-dark-3:#333;
+$color-grey-dark: #777;
+$color-grey-dark-2: #999;
+$color-grey-dark-3: #333;
 //font size
-$default-font-size:1.6rem;
+$default-font-size: 1.6rem;
 
 // GRID
-$grid-width:114rem;
-$gutter-vertical:8rem;
-$gutter-horizontal:6rem;
+$grid-width: 114rem;
+$gutter-vertical: 8rem;
+$gutter-horizontal: 6rem;
 
 // Box shadow
-$box-shadow-card:rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-//  font size 
-$h2-size:3.5rem;
-$h3-size:2.5rem;
-$h4-size:2rem;
-$h5-size:1.5rem;
+$box-shadow-card: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+  rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+  rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+//  font size
+$h1-size: 4rem;
+$h2-size: 3.5rem;
+$h3-size: 2.5rem;
+$h4-size: 2rem;
+$h5-size: 1.5rem;
 $p-size: 1.8rem;
